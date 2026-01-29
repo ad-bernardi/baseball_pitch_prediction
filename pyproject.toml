@@ -1,0 +1,39 @@
+---
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "baseball-pitch-prediction"
+version = "0.1.0"
+description = "Deep learning models for MLB pitch sequence and pitch outcome prediction."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "BSD"}
+authors = [
+  {name = "Anthony Bernardi" , email = "anthony.david.bernardi@gmail.com"}
+]
+
+[tool.black]
+line-length = 100 
+target-version = ['py311']
+include = '\.pyi?$'
+exclude = '''
+\(
+  \.git
+  | \.venc 
+  | build 
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100 
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = "-v --cov=src --cov-report=html"
+---
