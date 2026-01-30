@@ -1,2 +1,77 @@
 # baseball_pitch_prediction
+# More formal: Baseball Pitch Prediction with Deep Learning.
+Predicting MLB pitch outcomes using sequential deep learning models and Statcast data. 
+
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
+
+## Project Overview 
+This project aims to explore the application of neural networks, along with more modern modeling frameworks like Transformers to study pitch sequences and predict pitch outcomes in Major League Baseball. I'm interested in not only predicting pitch outcomes, but the sequences themselves, and why they are composed in that way, so to speak.
+
+## Current Status
+🚧 **Work in Progress** - Currently setting up project infrastructure. 
+
+## Planned Models 
+- [ ]: Baseline: Feedforward Neural Network 
+- [ ]: LSTM: Sequential prediction model (Long Short-Term Memory)
+- [ ]: Transformer: Attention-based architecture
+
+## Installation 
+
+### Prerequisites
+- Python 3.11+
+- Mamba/Conda (recommended) or pip 
+- Git 
+
+### Setup 
+```bash 
+# Clone repository 
+git clone https://github.com/ad-bernardi/baseball_pitch_prediction
+cd baseball_pitch_prediction
+
+# create environment with Mamba (recommended!)
+mamba env create -f environment.yml 
+
+# activate said environment 
+mamba activate baseball_ml 
+
+# installing project in editable mode 
+pip install -e 
+```
+## Quick start 
+```bash 
+# downloading data 
+python scripts/download_data.py --start-year 2024 --end-year 2024 
+
+# or you can use a makefile 
+make data 
+```
+## Project structure 
+```
+├── data/               # Data storage (gitignored)
+├── docs/              # Documentation
+├── notebooks/         # Jupyter notebooks
+├── src/              # Source code
+│   ├── data/         # Data loading and preprocessing
+│   ├── features/     # Feature engineering
+│   ├── models/       # Model architectures
+│   ├── utils/        # Utility functions
+│   └── visualization/# Plotting
+├── scripts/          # Executable scripts
+├── tests/            # Unit tests
+└── models/           # Saved models (gitignored)
+```
+
+## Data 
+Data comes from Statcast via the `pybaseball` library. 
+
+## Contact 
+Anthony Bernardi 
+- LinkedIn: [linkedin.com/in/bernardianthony](https://linkedin.com/in/bernardianthony)
+- GitHub: [@ad-bernardi](https://github.com/ad-bernardi)
+- Email: anthony.david.bernardi@gmail.com 
+
+## License 
+BSD License - see LICENSE file for details 
+---
+
 A project for predicting Baseball pitches and seeing what we can find out about pitch sequencing. Ideally we will start with Neural Networks, Long Short-Term Memory, and then we will move in to more modern approaches like Transformers.

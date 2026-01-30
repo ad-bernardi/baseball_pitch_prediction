@@ -1,0 +1,56 @@
+---
+# project specific data and models 
+data/raw/*
+data/processed/*
+data/external/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+
+models/*
+!models/.gitkeep
+
+# model files 
+*.pth
+*.pt 
+*.h5 
+*.pkl 
+*.pickle 
+
+# large data files 
+*.csv
+*.parquet
+*.feather
+
+# MLFlow 
+mlruns/
+mlartifacts/
+
+# Environment
+.env 
+.env.local 
+
+# Jupyter 
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/ 
+*.py[cod]
+*$py.class 
+*.so 
+
+# Testing 
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS 
+.DS_Store
+Thumbs.db 
+---
