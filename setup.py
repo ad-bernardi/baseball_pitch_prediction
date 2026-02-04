@@ -1,4 +1,3 @@
----
 from setuptools import setup, find_packages 
 
 setup(
@@ -10,7 +9,7 @@ setup(
         long_description=open("README.md").read(),
         long_description_content_type="text/markdown",
         url="https://github.com/ad-bernardi/baseball_pitch_prediction",
-        packages=find_packages(),
+        packages=find_packages(where="."),
         python_requires=">=3.11",
         install_requires=[
             "torch>=2.0.0",
