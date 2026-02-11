@@ -1,4 +1,3 @@
----
 """
 Script to download statcast data. 
 """
